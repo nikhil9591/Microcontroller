@@ -1,0 +1,59 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             arm1, CODE, READONLY
+    2 00000000         ENTRY
+    3 00000000         START
+    4 00000000 E3A01004        MOV              R1,#0x0004  ;  R1=0x0004
+    5 00000004 E3E02004        MVN              R2,#0x0004  ;  R2=NOT (0x0004)
+    6 00000008 E1E03001        MVN              R3,R1       ;   R3=NOT (R1)
+    7 0000000C EAFFFFFE 
+                       STOP    B                STOP
+    8 00000010                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\arm1.d -o.\objects\arm1.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMS
+IS\Include -IC:\Keil_v5\ARM\INC\Philips --predefine="__EVAL SETA 1" --predefine
+="__UVISION_VERSION SETA 529" --list=.\listings\arm1.lst arm1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file arm1.s
+   Uses
+      None
+Comment: ENTRY unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 3 in file arm1.s
+   Uses
+      None
+Comment: START unused
+STOP 0000000C
+
+Symbol: STOP
+   Definitions
+      At line 7 in file arm1.s
+   Uses
+      At line 7 in file arm1.s
+Comment: STOP used once
+arm1 00000000
+
+Symbol: arm1
+   Definitions
+      At line 1 in file arm1.s
+   Uses
+      None
+Comment: arm1 unused
+4 symbols
+336 symbols in table
